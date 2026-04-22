@@ -1,73 +1,73 @@
-# 🔧 I2C-UART Debugger
+# I2C-UART Debugger
 
-💡 Supports **I2C + UART Debugging with OLED Display & Web Dashboard**
+Supports I2C and UART debugging with OLED display and web dashboard
 
 ---
 
-## 📌 Overview
+## Overview
 
-**I2C-UART Debugger** is a Raspberry Pi-based embedded system tool designed to **test, analyze, and debug communication protocols** like I2C and UART.
+I2C-UART Debugger is a Raspberry Pi-based embedded system tool designed to test, analyze, and debug communication protocols like I2C and UART.
 
 It helps identify hardware and communication issues by running multiple test cases and displaying results on:
 
-* Terminal
-* OLED Display (I2C)
-* Web Dashboard (Flask)
-* Log Files
+- Terminal  
+- OLED Display (I2C)  
+- Web Dashboard (Flask)  
+- Log Files  
 
 ---
 
-## 🚀 Features
+## Features
 
-* ✅ I2C communication testing (multiple test cases)
-* ✅ UART communication testing & monitoring
-* ✅ OLED display for real-time results
-* ✅ Flask-based web dashboard
-* ✅ Parallel test execution
-* ✅ Log file generation for debugging
-* ✅ Modular and scalable design
-
----
-
-## 🧩 Supported Protocols
-
-### 🔹 I2C (Inter-Integrated Circuit)
-
-* NO ACK Detection
-* Bus Stuck Detection
-* Clock Test
-* Arbitration Check
-* Device Scan
-* Pull-up Verification
+- I2C communication testing (multiple test cases)  
+- UART communication testing and monitoring  
+- OLED display for real-time results  
+- Flask-based web dashboard  
+- Parallel test execution  
+- Log file generation for debugging  
+- Modular and scalable design  
 
 ---
 
-### 🔹 UART (Universal Asynchronous Receiver/Transmitter)
+## Supported Protocols
 
-* Data Transmission Test
-* Data Reception Test
-* Loopback Test
-* Baud Rate Validation
-* Timeout/Error Handling
+### I2C (Inter-Integrated Circuit)
 
----
-
-## 🛠️ Hardware Requirements
-
-* Raspberry Pi
-* OLED Display (SSD1306 - I2C)
-* I2C Device (EEPROM / Sensor)
-* UART Device (or loopback connection)
-* Jumper Wires
+- NO ACK Detection  
+- Bus Stuck Detection  
+- Clock Test  
+- Arbitration Check  
+- Device Scan  
+- Pull-up Verification  
 
 ---
 
-## 🔌 Connections
+### UART (Universal Asynchronous Receiver/Transmitter)
+
+- Data Transmission Test  
+- Data Reception Test  
+- Loopback Test  
+- Baud Rate Validation  
+- Timeout and Error Handling  
+
+---
+
+## Hardware Requirements
+
+- Raspberry Pi  
+- OLED Display (SSD1306 - I2C)  
+- I2C Device (EEPROM or Sensor)  
+- UART Device (or loopback connection)  
+- Jumper Wires  
+
+---
+
+## Connections
 
 ### I2C (OLED + Device)
 
 | OLED Pin | Raspberry Pi Pin |
-| -------- | ---------------- |
+|----------|------------------|
 | VCC      | 3.3V / 5V        |
 | GND      | GND              |
 | SDA      | GPIO2 (Pin 3)    |
@@ -78,26 +78,26 @@ It helps identify hardware and communication issues by running multiple test cas
 ### UART
 
 | UART Pin | Raspberry Pi Pin |
-| -------- | ---------------- |
+|----------|------------------|
 | TX       | RX (GPIO15)      |
 | RX       | TX (GPIO14)      |
 | GND      | GND              |
 
-👉 For testing: connect **TX ↔ RX (Loopback)**
+For testing: connect TX and RX (Loopback)
 
 ---
 
-## ⚙️ Software Requirements
+## Software Requirements
 
-* Python 3
-* smbus / smbus2
-* pyserial
-* Flask
-* OLED library (SSD1306)
+- Python 3  
+- smbus or smbus2  
+- pyserial  
+- Flask  
+- OLED library (SSD1306)  
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 i2c-uart-debugger/
@@ -115,18 +115,18 @@ i2c-uart-debugger/
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
-### 1️⃣ Clone Repository
+### Clone Repository
 
 ```
-git clone https://github.com/<your-username>/i2c-uart-debugger.git
+git clone https://github.com/H4rryC0d3/i2c-uart-debugger.git
 cd i2c-uart-debugger
 ```
 
 ---
 
-### 2️⃣ Install Dependencies
+### Install Dependencies
 
 ```
 pip3 install smbus2 pyserial flask luma.oled
@@ -134,15 +134,15 @@ pip3 install smbus2 pyserial flask luma.oled
 
 ---
 
-### 3️⃣ Run Project
+### Run Project
 
-#### ▶ Run Main System
+Run main system:
 
 ```
 python3 main.py
 ```
 
-#### 🌐 Run Web Dashboard
+Run web dashboard:
 
 ```
 python3 server.py
@@ -150,16 +150,16 @@ python3 server.py
 
 ---
 
-## 🌐 Web Dashboard
+## Web Dashboard
 
-* Real-time log streaming
-* Monitor I2C & UART results in browser
-* Parallel execution support
-* Lightweight Flask UI
+- Real-time log streaming  
+- Monitor I2C and UART results in browser  
+- Parallel execution support  
+- Lightweight Flask UI  
 
 ---
 
-## 📊 Sample Output
+## Sample Output
 
 ### Terminal
 
@@ -189,40 +189,40 @@ RESULT: PASS
 
 ---
 
-## 📁 Log Files
+## Log Files
 
-* logs/i2c_debug.log → stores I2C test results
-* logs/uart_debug.log → stores UART test results
-
----
-
-## 🎯 Applications
-
-* Embedded System Debugging
-* Hardware Testing & Validation
-* IoT Device Development
-* Communication Protocol Analysis
+- logs/i2c_debug.log stores I2C test results  
+- logs/uart_debug.log stores UART test results  
 
 ---
 
-## ⚡ Challenges Faced
+## Applications
 
-* I2C timeout and address conflicts
-* OLED display initialization issues
-* UART baud rate mismatch
-* Serial communication delays
-
----
-
-## 🔮 Future Improvements
-
-* Add SPI protocol support
-* Advanced UI with graphs
-* Error alert system
-* Remote monitoring
+- Embedded System Debugging  
+- Hardware Testing and Validation  
+- IoT Device Development  
+- Communication Protocol Analysis  
 
 ---
 
-## 📜 License
+## Challenges Faced
 
-This project is open-source and available under the MIT License.
+- I2C timeout and address conflicts  
+- OLED display initialization issues  
+- UART baud rate mismatch  
+- Serial communication delays  
+
+---
+
+## Future Improvements
+
+- Add SPI protocol support  
+- Advanced UI with graphs  
+- Error alert system  
+- Remote monitoring  
+
+---
+
+## License
+
+This project is open-source and available under the MIT License  
