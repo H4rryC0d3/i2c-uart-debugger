@@ -31,7 +31,7 @@ def flush_logs():
 
 bus = smbus.SMBus(I2C_BUS)
 
-# 🔥 NEW: live device check (detect wire removal during test)
+#live device check (detect wire removal during test)
 def device_alive():
     try:
         bus.read_byte(DEVICE_ADDR)
