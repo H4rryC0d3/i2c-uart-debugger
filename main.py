@@ -105,7 +105,7 @@ def start_stop_check():
 def timing_check():
     try:
         for i in range(20):
-            # 🔥 detect mid-run disconnection
+            #  detect mid-run disconnection
             if not device_alive():
                 return "FAIL"
             bus.write_byte(DEVICE_ADDR, i)
@@ -203,7 +203,7 @@ if __name__ == "__main__":
                 print("\nFINAL RESULT:", fail_msg)
                 sys.exit(1)
 
-        # ✅ ONLY PASS → OLED
+        # ONLY PASS → OLED
         success_msg = "ALL TESTS PASSED"
         logger.info(success_msg)
         flush_logs()
